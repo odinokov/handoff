@@ -1,6 +1,6 @@
 # handoff
 
-A [Claude Code](https://claude.com/claude-code) skill that writes `./HANDOFF.md` — a minimal, executable session handoff (Goal, State, Next step, Traps) so a fresh agent can resume work with zero prior context. It creates that one file and touches nothing else.
+A [Claude Code](https://claude.com/claude-code) skill that writes or updates `./HANDOFF.md` — a minimal, executable session handoff (Goal, Current Progress, What Worked, What Didn't Work, Next Steps) so a fresh agent can continue the work with zero prior context. It touches that one file and nothing else; on re-runs it updates the existing handoff instead of starting over.
 
 ## Install
 
@@ -24,10 +24,10 @@ Restart Claude Code; the skill is available as `/handoff`.
 
 ## Usage
 
-Invoke `/handoff` — or just say you're wrapping up; it triggers automatically. Claude writes `./HANDOFF.md` and stops.
+Invoke `/handoff` — or just say you're wrapping up; it triggers automatically. Claude writes (or updates) `./HANDOFF.md` and stops.
 
 To resume, start a fresh agent session in the same repo root and paste the file's final line as its first instruction:
 
 ```
-Bootstrap: Read ./HANDOFF.md, do §3 only, stop.
+Bootstrap: Read ./HANDOFF.md, start at §5 Next Steps.
 ```

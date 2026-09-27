@@ -20,6 +20,8 @@ curl -fsSL https://raw.githubusercontent.com/odinokov/handoff/HEAD/SKILL.md \
   -o .claude/skills/handoff/SKILL.md
 ```
 
+To update, re-run the `curl`.
+
 Restart Claude Code; the skill is available as `/handoff`.
 
 ## Install in OpenAI Codex
@@ -40,14 +42,20 @@ curl -fsSL https://raw.githubusercontent.com/odinokov/handoff/HEAD/SKILL.md \
   -o .agents/skills/handoff/SKILL.md
 ```
 
-Restart Codex or start a new session. Invoke the skill with `$handoff`, or ask Codex to write a handoff; it can select the skill automatically when the request matches its description.
+To update, re-run the `curl`.
+
+Codex picks up new skills automatically; restart it if `$handoff` doesn't appear. Invoke the skill with `$handoff`, or ask Codex to write a handoff; it can select the skill automatically when the request matches its description.
 
 ## Usage
 
-In Claude Code, invoke `/handoff`. In Codex, invoke `$handoff`. You can also say you're wrapping up; the agent can select the skill automatically. It writes (or updates) `./HANDOFF.md` and stops.
+In Claude Code, invoke `/handoff`. In Codex, invoke `$handoff`. You can also say you're wrapping up; the agent can select the skill automatically. It writes (or updates) `./HANDOFF.md` and stops. See [`HANDOFF.md`](HANDOFF.md) for a real example.
 
 To resume, start a fresh agent session in the same repo root and paste the file's final line as its first instruction:
 
 ```
 Bootstrap: Read ./HANDOFF.md, start at §5 Next Steps.
 ```
+
+## License
+
+[MIT](LICENSE)

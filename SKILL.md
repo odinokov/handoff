@@ -15,6 +15,7 @@ Write or update `./HANDOFF.md` — the only file you may create or modify. Read-
 
 ## Rules
 
+- Apply ASD-STE100.
 - Zero-context reader: record state, not history. One fact per bullet.
 - In §5 Next Steps, put any prerequisite before the action. Write one action per sentence in the imperative.
 - Exact paths, SHAs, commands, errors — verbatim. Never invent; mark guesses `UNVERIFIED:`. Redact secrets.
